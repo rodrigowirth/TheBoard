@@ -1,7 +1,7 @@
 (function (database){
 
 	var mongodb = require("mongodb");
-	var monoUrl = "mongodb://localhost:27017/theBoard";
+	var monoUrl = "mongodb://mongo:27017/theBoard";
 	var theDb = null;
 
 	database.getDb = function(next)

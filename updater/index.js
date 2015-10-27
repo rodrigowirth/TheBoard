@@ -8,9 +8,9 @@
 		io.sockets.on("connection", function(socket){
 			console.log("Socket was connected");
 
-			socket.on("join category", function(category{
+			socket.on("join category", function(category){
 				socket.join(category);
-			}));
+			});
 
 			socket.on("newNote", function(data){
 				socket.broadcast.to(data.category).emit("broadcast note", data.note);

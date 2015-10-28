@@ -1,17 +1,6 @@
-FROM java:7
-ADD auth .
-ADD controllers .
-ADD data .
-ADD public .
-ADD updater .
-ADD views .
+FROM node
 
-COPY .bowerrc .
-COPY Dockerfile .
-COPY gruntfile.js .
-COPY package.json .
-COPY server.js .
+ADD . ./src
+RUN cd /src; npm install
 
-RUN npm install
-
-CMD ["java", "JavaHelloWorld"]
+CMD ["node", "server.js"]

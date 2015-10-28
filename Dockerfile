@@ -1,6 +1,7 @@
 FROM node
 
-ADD . ./src
+COPY . ./src
 RUN cd /src; npm install
 
-CMD ["node", "./src/server.js"]
+EXPOSE  3000
+CMD ["node", "/src/index.js"]

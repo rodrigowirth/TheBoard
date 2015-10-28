@@ -1,7 +1,7 @@
 FROM node
 
-COPY . ./src
+COPY . .
 RUN cd /src; npm install
 
 EXPOSE  3000
-CMD ["node", "/src/server.js"]
+CMD ["node", "server.js"]
